@@ -1,3 +1,38 @@
+// 🚀 FORCE DEMO DATA FOR FIRST LOAD (GitHub Pages FIX)
+
+(function initDemoData() {
+    if (!localStorage.getItem("studyPilotInitialized")) {
+
+        console.log("Initializing demo data...");
+
+        // Tasks
+        localStorage.setItem("tasks", JSON.stringify([
+            { title: "Study DBMS", completed: false },
+            { title: "Practice DSA", completed: true }
+        ]));
+
+        // Progress
+        localStorage.setItem("progress", JSON.stringify({
+            xp: 40,
+            streak: 3,
+            completed: 2
+        }));
+
+        // Roadmap
+        localStorage.setItem("roadmap", JSON.stringify([
+            "HTML", "CSS", "JavaScript", "React"
+        ]));
+
+        // Timetable
+        localStorage.setItem("timetable", JSON.stringify([
+            { subject: "DBMS", time: "2 PM" },
+            { subject: "OS", time: "4 PM" }
+        ]));
+
+        // Mark initialized
+        localStorage.setItem("studyPilotInitialized", "true");
+    }
+})();
 (function () {
   const storage = window.StudyMindStorage;
   const seedData = window.StudyMindData || {};
